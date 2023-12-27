@@ -9,8 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  static const String bioFitFontFamily = 'BioFit';
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
