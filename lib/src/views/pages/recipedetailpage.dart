@@ -40,11 +40,9 @@ class _RecipeDetailPageState extends State<RecipeDetailPage> {
                               Navigator.pop(context);
                             },
                             style: IconButton.styleFrom(
-                                backgroundColor: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                fixedSize: const Size(50, 50)),
+                                foregroundColor: Colors.white,
+                                hoverColor: Colors.green,
+                                fixedSize: const Size(30, 30)),
                             icon: Icon(CupertinoIcons.chevron_back))
                       ],
                     )),
@@ -63,9 +61,6 @@ class _RecipeDetailPageState extends State<RecipeDetailPage> {
                     )),
               ],
             ),
-            const SizedBox(
-              height: 10,
-            ),
             Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
@@ -73,33 +68,33 @@ class _RecipeDetailPageState extends State<RecipeDetailPage> {
                 children: [
                   Text(
                     widget.food.title,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 10,
                   ),
-                  Text(widget.food.description),
+                  Text(widget.food.description, style: TextStyle(fontSize: 18)),
                   SizedBox(
                     height: 30,
                   ),
                   Text(
                     'Ingredients:',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(
                     height: 10,
                   ),
-                  Text(widget.food.ingredients),
+                  Text(widget.food.ingredients, style: TextStyle(fontSize: 18)),
                   SizedBox(
                     height: 30,
                   ),
                   Text(
                     'Directions:',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -111,7 +106,7 @@ class _RecipeDetailPageState extends State<RecipeDetailPage> {
                     children: widget.food.directions
                         .map((step) => Text(
                               step,
-                              style: TextStyle(fontSize: 16),
+                              style: TextStyle(fontSize: 18),
                             ))
                         .toList(),
                   ),

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:recipeapp/src/model/food.dart';
@@ -34,18 +35,11 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.5),
-                            blurRadius: 2,
-                          ),
-                        ],
                       ),
                       child: InkWell(
                         onTap: () {},
                         child: const Icon(
-                          Iconsax.notification,
+                          CupertinoIcons.search,
                           size: 30,
                           color: Colors.black,
                         ),
@@ -104,7 +98,7 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                           child: Text(
                             'View All',
                             style: TextStyle(
-                              fontSize: 12,
+                              fontSize: 13,
                               color: Colors.green,
                               fontWeight: FontWeight.bold,
                             ),
@@ -137,7 +131,7 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                           child: Text(
                             'View All',
                             style: TextStyle(
-                              fontSize: 12,
+                              fontSize: 13,
                               color: Colors.green,
                               fontWeight: FontWeight.bold,
                             ),
