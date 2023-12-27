@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipeapp/src/model/food.dart';
-import 'package:recipeapp/src/views/pages/recipedetailpage1.dart';
+import 'package:recipeapp/src/views/pages/recipedetailpage.dart';
 
 class RecipeItemWidget extends StatefulWidget {
   final Food food;

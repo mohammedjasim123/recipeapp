@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:recipeapp/src/model/food.dart';
+import 'package:recipeapp/src/views/pages/allrecipes_page.dart';
 import 'package:recipeapp/src/views/widgets/bannerCarousel.dart';
 import 'package:recipeapp/src/views/widgets/categories_widget.dart';
 import 'package:recipeapp/src/views/widgets/recipeitem_widget.dart';
@@ -93,12 +94,12 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                         InkWell(
                           onTap: () {
                             // Navigate to the new screen
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => BannerCarousel(),
-                              ),
-                            );
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (context) => BannerCarousel(),
+                            //   ),
+                            // );
                           },
                           child: Text(
                             'View All',
@@ -126,13 +127,12 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                         ),
                         InkWell(
                           onTap: () {
-                            // Navigate to the new screen
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => BannerCarousel(),
-                            //   ),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AllRecipesPage(),
+                              ),
+                            );
                           },
                           child: Text(
                             'View All',
@@ -152,7 +152,7 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                           crossAxisSpacing: 8.0,
                           mainAxisSpacing: 8.0,
                           mainAxisExtent: 250),
-                      itemCount: items.length,
+                      itemCount: 4,
                       shrinkWrap: true,
                       physics: NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) {
