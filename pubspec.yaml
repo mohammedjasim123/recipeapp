@@ -1,8 +1,6 @@
 name: recipeapp
 description: "A new Flutter project."
 
-
-
 version: 1.0.0+1
 
 environment:
@@ -17,6 +15,7 @@ dependencies:
   iconsax: ^0.0.8
   smooth_page_indicator: ^1.1.0
   carousel_slider: ^4.2.1
+  google_fonts: ^6.1.0
 
 
 dev_dependencies:
@@ -30,10 +29,10 @@ flutter:
 
   uses-material-design: true
 
-  fonts:
-    - family: BioFit
-      fonts:
-        - asset: assets/fonts/Biotif-Bold.ttf
-        - asset: assets/fonts/Biotif-Regular.ttf
-          weight: 700
+  # fonts:
+  #   - family: Poppins
+  #     fonts:
+  #       - asset: assets/fonts/Biotif-Bold.ttf
+  #       - asset: assets/fonts/Biotif-Regular.ttf
+  #         weight: 700
  

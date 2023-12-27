@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipeapp/src/views/pages/splashscreen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +17,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'RecipeRover',
       theme: ThemeData(
-        fontFamily: bioFitFontFamily,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        textTheme: GoogleFonts.poppinsTextTheme(),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
       home: const SplashScreen(),
