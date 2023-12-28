@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:recipeapp/src/views/pages/splashscreen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:recipeapp/src/views/pages/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());

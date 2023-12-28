@@ -12,7 +12,7 @@ class _SeearchBarWidgetState extends State<SeearchBarWidget> {
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color.fromARGB(26, 235, 231, 231)
 
       ),

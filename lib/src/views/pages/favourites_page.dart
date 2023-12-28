@@ -26,7 +26,7 @@ class _FavouritesPageState extends State<FavouritesPage> {
           ),
 
           // Your Content
-          Center(
+          const Center(
             child: Text(
               'Add your favourites here!',
               style: TextStyle(

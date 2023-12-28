@@ -5,7 +5,7 @@ import 'package:recipeapp/src/views/widgets/recipeitem_widget.dart';
 import 'package:flutter/cupertino.dart';
 
 class AllRecipesPage extends StatefulWidget {
-  const AllRecipesPage({Key? key});
+  const AllRecipesPage({super.key});
 
   @override
   State<AllRecipesPage> createState() => _AllRecipesPageState();
@@ -42,29 +42,30 @@ class _AllRecipesPageState extends State<AllRecipesPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => MainScreen()),
+                                  builder: (context) => const MainScreen()),
                             );
                           },
                           style: IconButton.styleFrom(
                             hoverColor: Colors.green,
                           ),
-                          icon: Icon(CupertinoIcons.chevron_back),
+                          icon: const Icon(CupertinoIcons.chevron_back),
                           color: Colors.black,
                           iconSize: 30,
                         ),
-                        Text(
+                        const Text(
                           'Recipes',
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(width: 30),
+                        const SizedBox(width: 30),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     GridView.builder(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         crossAxisSpacing: 8.0,
                         mainAxisSpacing: 8.0,
@@ -72,7 +73,7 @@ class _AllRecipesPageState extends State<AllRecipesPage> {
                       ),
                       itemCount: items.length,
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) {
                         return RecipeItemWidget(food: items[index]);
                       },

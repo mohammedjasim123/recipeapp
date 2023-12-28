@@ -23,8 +23,8 @@ class _BannerCarouselState extends State<BannerCarousel> {
           options: CarouselOptions(
             viewportFraction: 1,
             autoPlay: true, // Enable auto play
-            autoPlayInterval: Duration(seconds: 5), // Set auto play interval
-            autoPlayAnimationDuration: Duration(milliseconds: 1000),
+            autoPlayInterval: const Duration(seconds: 5), // Set auto play interval
+            autoPlayAnimationDuration: const Duration(milliseconds: 1000),
           ),
         ));
   }

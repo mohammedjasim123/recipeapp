@@ -4,6 +4,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:recipeapp/src/views/pages/allrecipes_page.dart';
 import 'package:recipeapp/src/views/pages/favourites_page.dart';
 import 'package:recipeapp/src/views/pages/homescreen_page.dart';
+import 'package:recipeapp/src/views/widgets/drawer_widget.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -32,20 +33,31 @@ class _MainScreenState extends State<MainScreen> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Iconsax.home),
+            icon: Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-              icon: Icon(Iconsax.element_3), label: 'Recipes'),
+            icon: Icon(Iconsax.element_3),
+            label: 'Recipes',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.heart), label: 'Favourites'),
+            icon: Icon(CupertinoIcons.heart),
+            label: 'Favorites',
+          ),
         ],
         currentIndex: currentTab,
         selectedItemColor: Colors.green[800],
         onTap: _onItemTapped,
       ),
-      body: Center(
-        child: screens.elementAt(currentTab),
+      body: Stack(
+        children: [
+          DrawerWidget(),
+          Center(
+            child: screens.elementAt(currentTab),
+          ),
+
+          // Other positioned widgets can be added here
+        ],
       ),
     );
   }

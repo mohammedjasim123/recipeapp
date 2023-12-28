@@ -43,21 +43,21 @@ class _RecipeItemWidgetState extends State<RecipeItemWidget> {
               Container(
                 decoration: BoxDecoration(
                   color: Colors.black.withOpacity(0.7),
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(16),
                 ),
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: Text(
                   widget.food.title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                   ),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
-              SizedBox(
-                height: 8,
-              )
+              // const SizedBox(
+              //   height: 8,
+              // )
             ],
           ),
         ),
